@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .stage{
+            perspective: 2000px;
+        }
+        .contains{
+            margin: 200px 500px;
+
+            /*contains 的高度影响观测点的位置*/
+            height: 200px;
+            /*background-color: yellow;*/
+
+            transform-style: preserve-3d;
+            animation: rotate3D 12s infinite;
+        }
+        img{
+            position: absolute;
+            width: 400px;
+        }
+
+
+        @keyframes rotate3D {
+            0%{transform: rotateY(0deg)}
+            16.7%{transform: rotateY(60deg)}
+            33.3%{transform: rotateY(120deg)}
+            50%{transform: rotateY(180deg)}
+            66.7%{transform: rotateY(240deg)}
+            83.3%{transform: rotateY(300deg)}
+            100%{transform: rotateY(360deg)}
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="stage">
+    <div class="contains">
+        <img src="images/04.jpg" style="transform: rotateY(0deg) translateZ(400px)">
+        <img src="images/05.jpg" style="transform: rotateY(60deg) translateZ(400px)">
+        <img src="images/06.jpg" style="transform: rotateY(120deg) translateZ(400px)">
+        <img src="images/07.jpg" style="transform: rotateY(180deg) translateZ(400px)">
+        <img src="images/08.jpg" style="transform: rotateY(240deg) translateZ(400px)">
+        <img src="images/09.jpg" style="transform: rotateY(300deg) translateZ(400px)">
+    </div>
+</div>
+
+
+</body>
+</html>
